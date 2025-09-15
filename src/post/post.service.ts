@@ -64,7 +64,7 @@ export class PostService {
   async getMyPosts(page: number, user: User) {
     const perPage = 10;
     const offset = (page - 1) * perPage;
-     const queryBuilder = this.getPostsBaseQuery(user.id);
+    const queryBuilder = this.getPostsBaseQuery(user.id);
     const posts = await queryBuilder.take(perPage).skip(offset).getMany();
 
     return this.getPostsWithOrderImages(posts);
@@ -220,7 +220,7 @@ export class PostService {
   ) {
     const perPage = 10;
     const offset = (page - 1) * perPage;
-     const queryBuilder = this.getPostsBaseQuery(user.id);
+    const queryBuilder = this.getPostsBaseQuery(user.id);
     const posts = await queryBuilder
       .andWhere(
         new Brackets((qb) => {
