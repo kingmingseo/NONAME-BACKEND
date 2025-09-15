@@ -196,7 +196,7 @@ export class PostService {
         'post.id AS id',
         'post.title AS title',
         'post.address AS address',
-        'EXTRACT(DAY FROM post.date) AS day',
+        'EXTRACT(DAY FROM post.date) AS date',
       ])
       .getRawMany();
 
