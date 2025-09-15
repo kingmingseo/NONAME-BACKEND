@@ -210,6 +210,8 @@ export class PostService {
       return acc;
     }, {});
 
+    console.log('Raw posts:', posts);
+
     return groupPostsByDate;
   }
 
